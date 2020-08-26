@@ -1,0 +1,23 @@
+@import '../../../css/_colours.scss';
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .settingsContainer {
+
+        .boxSetting {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        
+            .boxSettingElement {
+        
+                .invalidField {
+                    border: 2px $error-red solid;
+                }
+            }
+        }
+    }
+}

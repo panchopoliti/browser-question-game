@@ -1,0 +1,48 @@
+@import './_fonts.scss';
+@import './_colours.scss';
+@import './_mediaQueries.scss';
+
+.buttonDefaultStyles {
+    padding: 5px 15px;
+    margin: 2em 0.5em 0em;
+    font-size: 0.875rem;
+    min-width: 64px;
+    box-sizing: border-box;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    font-weight: 700;
+    line-height: 1.75;
+    border-radius: 4px;
+    letter-spacing: 0.02857em;
+    text-transform: uppercase;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+@mixin buttonWithoutHover ($color, $backColor) {
+    color: $color;
+    font-family: $font-roboto;
+    border: 2px solid $color;
+    background-color: $backColor;
+
+    @extend .buttonDefaultStyles;
+}
+
+@mixin button ($color, $backColor) {
+    @include buttonWithoutHover($color, $backColor);
+
+    @media screen and (min-width: $tablet) {
+        
+        &:hover {
+            color: $backColor;
+            background-color: $color;
+        }
+        
+    }
+   
+}
+
+.startButton {
+    @include button($start-blue-hover, #fff);
+}

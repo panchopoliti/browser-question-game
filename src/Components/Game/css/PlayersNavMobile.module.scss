@@ -1,0 +1,34 @@
+@import '../../../css/_buttons.scss';
+@import '../../../css/_colours.scss';
+@import '../../../css/_mediaQueries.scss';
+
+.hide {
+    display: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    .button {
+        @include buttonWithoutHover(#fff, $start-blue-hover);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 0;
+        border: 0;
+
+        figure {
+            margin: 0;
+            padding-right: 0.5em;
+        }
+    }
+}
+
+
+@media screen and (min-width: $tablet) {
+    .button {
+        display: none;
+    }
+}

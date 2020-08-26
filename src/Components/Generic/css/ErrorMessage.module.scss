@@ -1,0 +1,19 @@
+@import '../../../css/_fonts.scss';
+@import '../../../css/_colours.scss';
+
+.hide {
+    display: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1em;
+}
+
+.error {
+    color: $error-red;
+    font-weight: 700;
+    font-family: $font-roboto;
+}

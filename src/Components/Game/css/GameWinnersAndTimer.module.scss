@@ -1,0 +1,30 @@
+@import '../../../css/_colours.scss';
+
+
+.hide {
+    display: none;
+}
+
+.winnersContainers {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    figure {
+        margin: 0;
+        padding: 1em;
+    }
+
+    .text {
+        color: #fff;
+        font-size: 1.2em;
+        padding-right: 1em; 
+    } 
+}
+
+.tie {
+    background-color: orange;
+}
+
+@include get-player-colours('onlyWinner');

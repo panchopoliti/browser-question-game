@@ -1,0 +1,6 @@
+@import '../../../css/_colours.scss';
+@import '../../../css/_buttons.scss';
+
+.alert {
+    @include button($error-red, #fff);
+}

@@ -1,0 +1,48 @@
+@import '../../../css/_constants.scss';
+
+
+.hide {
+    display: none;
+}
+
+.timerContainer {
+    margin: 1em;
+
+    .twoNumbers {
+        position: relative;
+        left: 15px;
+    }
+
+    .oneNumber {
+        position: relative;
+        left: 9px;
+    }
+      
+    svg {
+        position: relative;
+        top: 14px;
+        right: 14px;
+        width: 40px;
+        height: 40px;
+        transform: rotateY(-180deg) rotateZ(-90deg);
+    }
+      
+    svg circle {
+        stroke-dasharray: 113px;
+        stroke-dashoffset: 0px;
+        stroke-linecap: round;
+        stroke-width: 2px;
+        stroke: #000;
+        fill: none;
+        animation: timer $animation-timer linear infinite forwards;
+    }
+    
+    @keyframes timer {
+        from {
+            stroke-dashoffset: 0px;
+        }
+        to {
+            stroke-dashoffset: 113px;
+        }
+    }
+}

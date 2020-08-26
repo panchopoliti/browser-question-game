@@ -1,0 +1,72 @@
+@import '../../../css/_colours.scss';
+@import '../../../css/_buttons.scss';
+@import '../../../css/_mediaQueries.scss';
+
+.listContainer {
+    padding: 0;
+    width: 60%;
+
+    .option {
+        list-style: none;
+        padding: 0.5em;
+
+        .button {
+            @extend .buttonDefaultStyles;
+            color: #fff;
+            font-family: "Roboto", sans-serif;
+            border: 2px solid $start-blue;
+            background-color: $start-blue;
+            outline-color: $start-blue-hover;
+        }
+        
+        .correct {
+            background-color: $success-green;
+            border: 2px solid $success-green;
+        }
+        
+        .incorrect {
+            background-color: $error-red;
+            border: 2px solid $error-red;
+        }
+        
+        .correct, .incorrect {
+            color: #fff;
+        }
+    }
+}
+
+@media screen and (min-width: $tablet) {
+    .listContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        .option {
+
+            .button {
+        
+                &:hover {
+                    background-color: $start-blue-hover;
+                    border: 2px solid $start-blue-hover;
+                }
+            }
+
+            .correct {
+
+
+                &:hover {
+                    background-color: $success-green;
+                    border: 2px solid $success-green;
+                }
+            }
+
+            .incorrect {
+            
+                &:hover {
+                    background-color: $error-red;
+                    border: 2px solid $error-red;
+                }
+            }
+        }
+    }
+}

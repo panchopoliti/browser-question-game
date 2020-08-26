@@ -1,0 +1,6 @@
+$timer: 13;
+$animation-timer: $timer + 0s;
+
+:export {
+    timerSeconds: $timer;
+}
