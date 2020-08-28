@@ -25,6 +25,5 @@ Reach
 ### Other Libraries
 Lodash
 
-
 ## Deployment
-Through Gh-Pahes
+Through Gh-Pages
