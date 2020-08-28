@@ -1,5 +1,20 @@
 @import '../../../css/_colours.scss';
 
+.inputForm {
+    border: 1px solid #a6a6a6;
+    border-top-color: #949494;
+    border-radius: 3px;
+    padding-left: 0.5em;
+    box-shadow: 0 1px 0 rgba(255,255,255,.5), 0 1px 0 rgba(0,0,0,.07) inset;
+    outline: 0;
+    vertical-align: middle;
+
+    &:focus {
+        border-color: #e77600;
+        box-shadow: 0 0 3px 2px rgba(228,121,17,.5);
+    }
+}
+
 .container {
     display: flex;
     align-items: center;
@@ -19,20 +34,37 @@
             .boxSettingElement {
 
                 .inputForm {
-                    border: 1px solid #a6a6a6;
-                    border-top-color: #949494;
-                    border-radius: 3px;
-                    padding-left: 0.5em;
-                    box-shadow: 0 1px 0 rgba(255,255,255,.5), 0 1px 0 rgba(0,0,0,.07) inset;
-                    outline: 0;
+                    @extend .inputForm;
                     height: 2em;
-                    vertical-align: middle;
                     font-size: 1.2em;
+                }
 
-                    &:focus {
-                        border-color: #e77600;
-                        box-shadow: 0 0 3px 2px rgba(228,121,17,.5);
-                    }
+                .numberOfPlayersInput {
+                    width: 4em;
+                }
+
+                .difficultyInput {
+                    width: 10em;
+                }
+        
+                .invalidField {
+                    border: 2px $error-red solid;
+                    display: inline-block;
+                }
+            }
+        }
+
+        .modalBoxSetting {
+
+            .moduleTitle {
+                font-size: 1em;
+            }
+        
+            .boxSettingElement {
+
+                .inputForm {
+                    @extend .inputForm;
+                    font-size: 1em;
                 }
 
                 .numberOfPlayersInput {

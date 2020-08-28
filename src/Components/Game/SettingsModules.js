@@ -4,11 +4,11 @@ import { Switch, ComboBox } from '../Generic';
 import styles from './css/SettingsModules.module.scss';
 import { ErrorMessage } from '../Generic';
 
-function SettingsModule({ id, title, invalid, errorMessage, children }) {
+function SettingsModule({ id, title, invalid, errorMessage, isModalDisplayed, children }) {
     return (
         <React.Fragment>
             <hr/>
-            <div className={styles.boxSetting}>
+            <div className={(isModalDisplayed) ? styles.modalBoxSetting :styles.boxSetting}>
                 <h4 id={id} className={styles.moduleTitle}>{title}</h4>
                 <div className={styles.boxSettingElement}>
                     <div className={`${(invalid) ? styles.invalidField : ''}`} aria-invalid={invalid}>
@@ -21,7 +21,7 @@ function SettingsModule({ id, title, invalid, errorMessage, children }) {
     )
 }
 
-export default function SettingsModules({ children, fields }) {
+export default function SettingsModules({ children, fields, isModalDisplayed }) {
 
     const getSettingsModules = () => {
 
@@ -89,7 +89,7 @@ export default function SettingsModules({ children, fields }) {
             const moduleProps =  getModulePropsFromField(field)
             const addFurtherProps = furtherSettings(field, moduleProps);
 
-            return <SettingsModule key={i} {...addFurtherProps}/>
+            return <SettingsModule key={i} isModalDisplayed={isModalDisplayed} {...addFurtherProps}/>
         });
 
         return settingModules;
@@ -132,5 +132,6 @@ SettingsModules.propTypes = {
                 text: PropTypes.string,
             }),
         }),
-    )
+    ),
+    isModalDisplayed: PropTypes.bool,
 }

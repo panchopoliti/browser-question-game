@@ -62,6 +62,7 @@ export default function App() {
         fields: fieldsArray,
         successButtonHandler: onInitialSettingsButtonClick,
         title: 'Initial Settings',
+        isModalBeingDisplayed: false,
     }
 
     const gameProps = {

@@ -30,6 +30,7 @@ export default function GameSettingsModal({
                 isGameStarted={isGameStarted}
                 fields={fields}
                 successButtonHandler={onSuccessButtonHandler}
+                isModalBeingDisplayed={true}
                 cancelButton={
                     <Button 
                         text={'Cancel'} 

@@ -21,6 +21,7 @@ export default function GameSettings ({
     cancelButton,
     title,
     titleClassname,
+    isModalBeingDisplayed,
     stopKeyEventPropagation, 
     containerId
     }) {
@@ -123,7 +124,7 @@ export default function GameSettings ({
             { title && <div className={styles.titleContainer}>
                 <h1 className={(titleClassname) ? titleClassname : styles.title}>{title}</h1>
             </div>}
-            <SettingsModules fields={settingFields}>
+            <SettingsModules fields={settingFields} isModalDisplayed={isModalBeingDisplayed}>
             <div className={styles.buttonsContainer}>
                 { cancelButton }
                 <Button 
@@ -150,6 +151,7 @@ GameSettings.propTypes = {
             handler: PropTypes.func,
         }),
     ),
+    isModalBeingDisplayed: PropTypes.bool,
     isGameStarted: PropTypes.bool,
     title: PropTypes.string,
     titleClassname: PropTypes.string,
