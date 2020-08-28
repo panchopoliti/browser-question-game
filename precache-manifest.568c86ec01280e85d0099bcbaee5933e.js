@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "553359943c79aa097701a5f6cf855640",
+    "revision": "1b5278c02be61da8e221f46af4a3bda7",
     "url": "/browser-question-game/index.html"
   },
   {
-    "revision": "2a145acf7ff7b20206d6",
+    "revision": "b8d50d2e3669f269f0ad",
     "url": "/browser-question-game/static/css/2.6eff3e32.chunk.css"
   },
   {
-    "revision": "5bd4f75ac921d5095a9b",
-    "url": "/browser-question-game/static/css/main.bb1b6248.chunk.css"
+    "revision": "b68d741b99d9fae25105",
+    "url": "/browser-question-game/static/css/main.0e78bcac.chunk.css"
   },
   {
-    "revision": "2a145acf7ff7b20206d6",
-    "url": "/browser-question-game/static/js/2.8612734c.chunk.js"
+    "revision": "b8d50d2e3669f269f0ad",
+    "url": "/browser-question-game/static/js/2.9e5d77b3.chunk.js"
   },
   {
     "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/browser-question-game/static/js/2.8612734c.chunk.js.LICENSE.txt"
+    "url": "/browser-question-game/static/js/2.9e5d77b3.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5bd4f75ac921d5095a9b",
-    "url": "/browser-question-game/static/js/main.82d37e40.chunk.js"
+    "revision": "b68d741b99d9fae25105",
+    "url": "/browser-question-game/static/js/main.34f92ff9.chunk.js"
   },
   {
     "revision": "71853730335446e35602",
