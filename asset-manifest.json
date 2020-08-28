@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/panchopoliti/browser-question-game/static/css/main.bb1b6248.chunk.css",
+    "main.js": "/panchopoliti/browser-question-game/static/js/main.f3b06f18.chunk.js",
+    "main.js.map": "/panchopoliti/browser-question-game/static/js/main.f3b06f18.chunk.js.map",
+    "runtime-main.js": "/panchopoliti/browser-question-game/static/js/runtime-main.2312e0ae.js",
+    "runtime-main.js.map": "/panchopoliti/browser-question-game/static/js/runtime-main.2312e0ae.js.map",
+    "static/css/2.6eff3e32.chunk.css": "/panchopoliti/browser-question-game/static/css/2.6eff3e32.chunk.css",
+    "static/js/2.8612734c.chunk.js": "/panchopoliti/browser-question-game/static/js/2.8612734c.chunk.js",
+    "static/js/2.8612734c.chunk.js.map": "/panchopoliti/browser-question-game/static/js/2.8612734c.chunk.js.map",
+    "index.html": "/panchopoliti/browser-question-game/index.html",
+    "precache-manifest.a44b68a974b3bac5d2d5c2a60ad60204.js": "/panchopoliti/browser-question-game/precache-manifest.a44b68a974b3bac5d2d5c2a60ad60204.js",
+    "service-worker.js": "/panchopoliti/browser-question-game/service-worker.js",
+    "static/css/2.6eff3e32.chunk.css.map": "/panchopoliti/browser-question-game/static/css/2.6eff3e32.chunk.css.map",
+    "static/css/main.bb1b6248.chunk.css.map": "/panchopoliti/browser-question-game/static/css/main.bb1b6248.chunk.css.map",
+    "static/js/2.8612734c.chunk.js.LICENSE.txt": "/panchopoliti/browser-question-game/static/js/2.8612734c.chunk.js.LICENSE.txt",
+    "static/media/chevron-down-solid.svg": "/panchopoliti/browser-question-game/static/media/chevron-down-solid.df790f72.svg",
+    "static/media/chevron-up-solid.svg": "/panchopoliti/browser-question-game/static/media/chevron-up-solid.b2498aea.svg",
+    "static/media/cog-solid.svg": "/panchopoliti/browser-question-game/static/media/cog-solid.9f07a3df.svg",
+    "static/media/trophy-solid.svg": "/panchopoliti/browser-question-game/static/media/trophy-solid.1ebbbd24.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2312e0ae.js",
+    "static/css/2.6eff3e32.chunk.css",
+    "static/js/2.8612734c.chunk.js",
+    "static/css/main.bb1b6248.chunk.css",
+    "static/js/main.f3b06f18.chunk.js"
+  ]
+}
