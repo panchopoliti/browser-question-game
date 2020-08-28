@@ -9,7 +9,7 @@ function SettingsModule({ id, title, invalid, errorMessage, children }) {
         <React.Fragment>
             <hr/>
             <div className={styles.boxSetting}>
-                <h4 id={id}>{title}</h4>
+                <h4 id={id} className={styles.moduleTitle}>{title}</h4>
                 <div className={styles.boxSettingElement}>
                     <div className={`${(invalid) ? styles.invalidField : ''}`} aria-invalid={invalid}>
                         {children}
@@ -48,6 +48,7 @@ export default function SettingsModules({ children, fields }) {
                     children: <input 
                         type='number'
                         id={prevSettings.fieldId} 
+                        className={`${styles.inputForm} ${styles.numberOfPlayersInput}`}
                         value={field.value} 
                         onChange={field.handler} 
                         aria-labelledby={prevSettings.moduleId}
@@ -68,6 +69,7 @@ export default function SettingsModules({ children, fields }) {
                         inputId={prevSettings.fieldId}
                         options={field.possibleDifficulties} 
                         handleSelect={field.handler.handleSelect}
+                        inputClassName={`${styles.inputForm} ${styles.difficultyInput}`}
                         inputValue={field.value}
                         handleOnChange={field.handler.handleOnChange}
                         aria-labelledby={prevSettings.moduleId}    

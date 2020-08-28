@@ -8,7 +8,7 @@ import {
     ComboboxOption,
   } from "@reach/combobox";
   import "@reach/combobox/styles.css";
-  import './css/ComboBox.scss'
+  import styles from './css/ComboBox.module.scss'
   
 
 export default function ComboBox({ 
@@ -16,6 +16,7 @@ export default function ComboBox({
     handleSelect, 
     inputId, 
     inputValue,
+    inputClassName,
     handleOnChange,
  }) {
 
@@ -29,9 +30,14 @@ export default function ComboBox({
                 onSelect={handleSelect}
                 openOnFocus
             >
-            <ComboboxInput id={inputId} value={inputValue} onChange={handleOnChange}/>
+            <ComboboxInput 
+                id={inputId} 
+                value={inputValue} 
+                onChange={handleOnChange}
+                className={inputClassName}
+                />
             <ComboboxPopover>
-                <ComboboxList persistSelection>
+                <ComboboxList persistSelection className={styles.list}>
                     {renderOptions}
                 </ComboboxList>
             </ComboboxPopover>
@@ -45,5 +51,6 @@ ComboBox.propTypes = {
     handleComboBox: PropTypes.func,
     handleOnChange: PropTypes.func,
     inputValue: PropTypes.string,
+    inputClassName: PropTypes.string,
     inputId: PropTypes.string,
 }
