@@ -16,7 +16,7 @@
     "react-scripts": "3.4.3",
     "react-switch": "^5.0.1"
   },
-  "homepage": "https://github.com/panchopoliti/browser-question-game",
+  "homepage": "https://panchopoliti.github.io/browser-question-game/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
