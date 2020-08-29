@@ -1,7 +1,7 @@
 import cssConstants from './css/_constants.scss';
 
-const MILISECONDS_BETWEEN_QUESTIONS = 1000;
-const NUMBER_OF_QUESTIONS_PER_PLAYER = 1;
+const MILISECONDS_BETWEEN_QUESTIONS = 3000;
+const NUMBER_OF_QUESTIONS_PER_PLAYER = 2;
 const SECONDS_PER_QUESTION_WITH_TIMER = +cssConstants.timerSeconds;
 
 export {
