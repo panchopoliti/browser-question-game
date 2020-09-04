@@ -9,12 +9,12 @@ export default function GameWinnersAndTimer({ timerSettings, gameWinners }) {
     const { typeOfEndOfGame, winners} = gameWinners || {};
 
     const winningText = getWinningText(gameWinners);
-    const typeOfWinnerStyle = (typeOfEndOfGame === 'Win') ? `${styles[`onlyWinner${winners[0].id + 1}`]}` : styles.tie;
+    const typeOfWinnerStyle = (typeOfEndOfGame === 'Win') ? `${styles[`onlyWinner-${winners[0].id + 1}`]}` : styles.tie;
 
     return (
         <React.Fragment>
             <Timer {...timerSettings}/>
-            <div className={(gameWinners) ? '' : styles.hide}>
+            <div className={`${styles.container} ${(gameWinners) ? '' : styles.hide}`}>
                 <div className={`${styles.winnersContainers} ${typeOfWinnerStyle}`}>
                     <figure>
                         <img src={TrophySVG} alt='Trophy Logo' height='40' width='40' />

@@ -1,3 +1,5 @@
+import { MAX_PLAYERS_IN_GAME } from '../constants.js';
+
 function getValidationArgs(fields) {
 
     const difficultyValidationFn = (value, possibleDifficulties) => {
@@ -10,7 +12,7 @@ function getValidationArgs(fields) {
     const validationArgs = fields.map((field) => {
     
         const validationFn = {
-            numberOfPlayers: (value) => (value <= 4) && (value > 1),
+            numberOfPlayers: (value) => (value <= MAX_PLAYERS_IN_GAME) && (value > 1),
             playWithTimer: () => true,
             difficulty: (value) => difficultyValidationFn(value, field.possibleDifficulties),
         }

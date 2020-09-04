@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Switch, ComboBox } from '../Generic';
 import styles from './css/SettingsModules.module.scss';
 import { ErrorMessage } from '../Generic';
+import { MAX_PLAYERS_IN_GAME } from '../../constants.js';
 
 function SettingsModule({ id, title, invalid, errorMessage, isModalDisplayed, children }) {
     return (
@@ -52,6 +53,8 @@ export default function SettingsModules({ children, fields, isModalDisplayed }) 
                         value={field.value} 
                         onChange={field.handler} 
                         aria-labelledby={prevSettings.moduleId}
+                        min={1}
+                        max={MAX_PLAYERS_IN_GAME}
                     />,
                 },
                 playWithTimer: {

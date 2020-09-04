@@ -1,5 +1,5 @@
 @import '../../../css/_buttons.scss';
-@import '../../../css/_colours.scss';
+@import '../../../css/_colors.scss';
 @import '../../../css/_mediaQueries.scss';
 
 .hide {
@@ -18,6 +18,7 @@
         justify-content: center;
         margin: 0;
         border: 0;
+        border-radius: 0;
 
         figure {
             margin: 0;

@@ -1,5 +1,5 @@
 @import '../../../css/mediaQueries';
-@import '../../../css/colours';
+@import '../../../css/colors';
 
 
 .sideNav {
@@ -42,7 +42,12 @@
 
 }
 
-@include get-player-colours('playerNameContainer');
+@for $i from 1 through length($players-colors) {
+
+    .sideNav:nth-child(#{$i}) > .playerNameContainer {
+        background-color: nth($players-colors, $i);
+    }
+}
 
 @media screen and (max-width: $phones) {
     .sideNav {

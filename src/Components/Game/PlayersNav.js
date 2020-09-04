@@ -8,7 +8,7 @@ export default function PlayersNav({ players }) {
 
         return (
             <li key={i} className={styles.navItem}>
-                <div className={`${styles[`nameContainer${i + 1}`]} ${styles.nameContainer}`}>
+                <div className={styles.nameContainer}>
                     <p className={styles.name}>{player.name}</p>
                     <p className={(player.turn) ? styles.yourTurn : styles.hide}>It's your turn</p>
                 </div>

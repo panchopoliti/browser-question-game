@@ -1,4 +1,4 @@
-@import '../../../css/_colours.scss';
+@import '../../../css/_colors.scss';
 @import '../../../css/_buttons.scss';
 @import '../../../css/_mediaQueries.scss';
 
@@ -17,6 +17,18 @@
             border: 2px solid $start-blue;
             background-color: $start-blue;
             outline-color: $start-blue-hover;
+            transition: opacity 0.5s, transform 0.5s;
+            opacity: 1;
+        }
+
+        .animateToRight {
+            transform: translate(9em);
+            opacity: 0;
+        }
+
+        .animateFromLeft {
+            transform: translate(-9em);
+            opacity: 0;
         }
         
         .correct {

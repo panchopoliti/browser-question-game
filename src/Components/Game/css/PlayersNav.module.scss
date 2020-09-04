@@ -1,6 +1,6 @@
 @import '../../../css/_fonts.scss';
 @import '../../../css/_mediaQueries.scss';
-@import '../../../css/_colours.scss';
+@import '../../../css/_colors.scss';
 
 .hide {
     display: none;
@@ -50,20 +50,20 @@
 
 @for $i from 1 through 4 {
 
-    .nameContainer#{$i} {
-        background-color: nth($players-colours, $i);
+    .navItem:nth-child(#{$i}) > .nameContainer {
+        background-color: nth($players-colors, $i);
 
         + .tooltip {
-            background-color: nth($players-colours, $i);
+            background-color: nth($players-colors, $i);
         }
 
         @media screen and (min-width: $tablet) {
             + .tooltip {
-                background-color: nth($players-colours-hover, $i);
+                background-color: nth($players-colors-hover, $i);
             }
 
             &:hover {
-                background-color: nth($players-colours-hover, $i);
+                background-color: nth($players-colors-hover, $i);
             }
         }
     }

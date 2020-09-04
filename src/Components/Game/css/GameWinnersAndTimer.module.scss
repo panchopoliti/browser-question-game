@@ -1,4 +1,4 @@
-@import '../../../css/_colours.scss';
+@import '../../../css/_colors.scss';
 
 
 .hide {
@@ -27,4 +27,9 @@
     background-color: orange;
 }
 
-@include get-player-colours('onlyWinner');
+@for $i from 1 through length($players-colors) {
+
+    .sideNav > .onlyWinner-#{$i} {
+        background-color: nth($players-colors, $i);
+    }
+}
