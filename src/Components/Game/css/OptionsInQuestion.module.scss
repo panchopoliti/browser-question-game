@@ -14,9 +14,8 @@
             @extend .buttonDefaultStyles;
             color: #fff;
             font-family: "Roboto", sans-serif;
-            border: 2px solid $start-blue;
-            background-color: $start-blue;
-            outline-color: $start-blue-hover;
+            border: 2px solid $primary;
+            background-color: $primary;
             transition: opacity 0.5s, transform 0.5s;
             opacity: 1;
         }
@@ -32,13 +31,13 @@
         }
         
         .correct {
-            background-color: $success-green;
-            border: 2px solid $success-green;
+            background-color: $success;
+            border: 2px solid $success;
         }
         
         .incorrect {
-            background-color: $error-red;
-            border: 2px solid $error-red;
+            background-color: $danger;
+            border: 2px solid $danger;
         }
         
         .correct, .incorrect {
@@ -58,8 +57,8 @@
             .button {
         
                 &:hover {
-                    background-color: $start-blue-hover;
-                    border: 2px solid $start-blue-hover;
+                    background-color: $primary-lighter;
+                    border: 2px solid $primary-lighter;
                 }
             }
 
@@ -67,16 +66,16 @@
 
 
                 &:hover {
-                    background-color: $success-green;
-                    border: 2px solid $success-green;
+                    background-color: $success;
+                    border: 2px solid $success;
                 }
             }
 
             .incorrect {
             
                 &:hover {
-                    background-color: $error-red;
-                    border: 2px solid $error-red;
+                    background-color: $danger;
+                    border: 2px solid $danger;
                 }
             }
         }

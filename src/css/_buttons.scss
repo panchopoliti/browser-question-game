@@ -44,5 +44,5 @@
 }
 
 .startButton {
-    @include button($start-blue-hover, #fff);
+    @include button($primary-lighter, #fff);
 }

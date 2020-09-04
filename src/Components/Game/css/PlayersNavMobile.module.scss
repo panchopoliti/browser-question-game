@@ -12,7 +12,7 @@
     flex-direction: column;
 
     .button {
-        @include buttonWithoutHover(#fff, $start-blue-hover);
+        @include buttonWithoutHover(#fff, $primary-lighter);
         display: flex;
         flex-direction: row;
         justify-content: center;

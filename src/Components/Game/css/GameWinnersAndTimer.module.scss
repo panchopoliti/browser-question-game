@@ -29,7 +29,7 @@
 
 @for $i from 1 through length($players-colors) {
 
-    .sideNav > .onlyWinner-#{$i} {
+    .container > .onlyWinner-#{$i} {
         background-color: nth($players-colors, $i);
     }
 }

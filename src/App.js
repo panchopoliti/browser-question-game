@@ -3,6 +3,7 @@ import { GameSettings } from './Components/Game';
 import { useHookWithValueAndHandler } from './Hooks/game-hooks.js';
 import { getDifficulties } from './functions/question-functions.js';
 import { createFieldIds } from './functions/settings-form-functions.js';
+import styles from './css/App.module.scss';
 import Game from './Game.js';
 
 const names = [
@@ -75,8 +76,8 @@ export default function App() {
     const showApp = (showInitialSettings) ? <GameSettings {...gameSettingsProps}/> : <Game {...gameProps}/>;
 
     return (
-        <React.Fragment>
+        <div className={styles.main}>
             {showApp}
-        </React.Fragment>
+        </div>
     )
 }

@@ -10,9 +10,9 @@
 }
 
 .correct {
-color: $success-green;;
+color: $success;
 }
 
 .incorrect, .timeOver {
-color: $error-red;
+color: $danger;
 }

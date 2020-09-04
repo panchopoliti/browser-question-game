@@ -1,5 +1,6 @@
 @import './_buttons.scss';
 @import './_mediaQueries.scss';
+@import './colors.scss';
 
 .hide {
   display: none;
@@ -35,6 +36,7 @@
     .gameContainer {
         width: 100vw;
         height: 100vh;
+        background-color: $main-back-color;
 
         .questionsAndAnswersContainer {
             display: flex;

@@ -2,5 +2,5 @@
 @import '../../../css/_buttons.scss';
 
 .alert {
-    @include button($error-red, #fff);
+    @include button($danger, #fff);
 }

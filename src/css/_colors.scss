@@ -1,14 +1,15 @@
-$outline-red: #FA686C; 
-$error-red: #ef5858;
-$error-red-hover: red;
+$danger-lighter: #FA686C; 
+$danger: #ef5858;
 
-$start-blue: #1976d2;
-$start-blue-hover: #4da3f9;
+$primary: #1976d2;
+$primary-lighter: #4da3f9;
 
-// $success-green: #1ab394;
-$success-green: #5cd696;
-// $success-green-hover: #028a6f;
-$success-green-hover: #39E0A2;
+// $success: #1ab394;
+$success: #5cd696;
+// $success-hover: #028a6f;
+$success-lighter: #39E0A2;
+
+$main-back-color: #303846;
 
 $players-colors: #56e454, #f72d32, #443B9F, #CA945D;
 $players-colors-hover: #39E0A2, #FA686C, #7064ef, #ffbf7d;

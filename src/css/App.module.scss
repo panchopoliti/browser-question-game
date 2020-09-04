@@ -1,3 +1,6 @@
-.hide {
-    display: none;
+@import './colors';
+
+.main {
+    background-color: $main-back-color;
+    height: 100vh;
 }

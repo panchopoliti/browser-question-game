@@ -5,7 +5,7 @@
 .bubble {
     position: relative;
     width: 60%;
-    background-color: $start-blue-hover;
+    background-color: #fff;
     border-radius: 40px;
     padding: 1em;
     text-align: center;
@@ -16,9 +16,9 @@
     width: 0px;
     height: 0px;
     position: absolute;
-    border-left: 24px solid $start-blue-hover;
+    border-left: 24px solid #fff;
     border-right: 12px solid transparent;
-    border-top: 12px solid $start-blue-hover;
+    border-top: 12px solid #fff;
     border-bottom: 20px solid transparent;
     left: 32px;
     bottom: -24px;
@@ -26,7 +26,7 @@
 
   .text {
     font-family: $font-oxygen;
-    color: #fff;
+    color: $primary-lighter;
     font-size: 1.3em;
     letter-spacing: 2;
   }
