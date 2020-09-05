@@ -10,6 +10,7 @@ import {
   BelowAnswersContainer,
   MobileSideNavBar,
 } from './Components/Game';
+import { Footer } from './Components/Generic';
 import { GameSettingsModal } from './Components/Modals';
 import { chooseNextIdQuestion, isGameFinished, handleNextQuestion, createPlayers } from './functions/question-functions.js';
 import { listOfQuestions } from './Questions/questions.js';
@@ -159,6 +160,7 @@ export default function Game({ fields: settingFields, isGameStarted, setStartGam
         <AnswerStatus status={answerStatus} visibility={ansStatusVisibility} />
         <BelowAnswersContainer handleModal={handleModal} isGameStarted={isGameStarted} restartGame={restartGame}/>
       </main>
+      <Footer/>
     </div>
   );
 }

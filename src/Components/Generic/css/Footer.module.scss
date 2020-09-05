@@ -1,0 +1,21 @@
+footer {
+    display: flex;
+    justify-content: center;
+    height: 5vh;
+
+    span {
+        font-size: 0.8em;
+        color: #6d6d6d;
+
+        a {
+            text-decoration: none;
+            color: #6d6d6d;
+            cursor: pointer;
+
+            &:visited {
+                color: #6d6d6d;
+            }
+        }
+
+    }
+}
