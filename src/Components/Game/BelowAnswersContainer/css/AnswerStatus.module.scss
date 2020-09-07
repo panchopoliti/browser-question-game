@@ -1,0 +1,19 @@
+@import '../../../../css/_colors.scss';
+
+.hide {
+    display: none;
+}
+
+.status {
+    font-weight: 700;
+    font-size: 1.3em;
+    margin: 0;
+}
+
+.correct {
+color: $success;
+}
+
+.incorrect, .timeOver {
+color: $danger;
+}

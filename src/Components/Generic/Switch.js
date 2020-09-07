@@ -5,7 +5,7 @@ export default function SwitchComponent(settings) {
     
     return (
         <Switch
-            onColor="#52d869"
+            onColor="#4da3f9"
             uncheckedIcon={false}
             checkedIcon={false}
             boxShadow="0px 1px 5px rgba(0, 0, 0, 0.6)"

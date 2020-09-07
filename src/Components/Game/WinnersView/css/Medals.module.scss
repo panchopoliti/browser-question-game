@@ -1,0 +1,8 @@
+.container {
+    display: flex;
+    flex-direction: row;
+
+    > figure {
+        padding: 0 0.5em;
+    }
+}

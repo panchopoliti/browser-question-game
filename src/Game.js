@@ -1,18 +1,15 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { 
-  QuestionText, 
-  OptionsInQuestion, 
-  GameWinnersAndTimer, 
-  AnswerStatus, 
-  PlayersNav, 
-  PlayersNavMobile, 
+  QuestionsAndAnswers, 
+  PlayersNav,
   BelowAnswersContainer,
   MobileSideNavBar,
+  WinnersView,
 } from './Components/Game';
 import { Footer } from './Components/Generic';
 import { GameSettingsModal } from './Components/Modals';
-import { chooseNextIdQuestion, isGameFinished, handleNextQuestion, createPlayers } from './functions/question-functions.js';
+import { chooseNextIdQuestion, handleNextQuestion, createPlayers } from './functions/question-functions.js';
 import { listOfQuestions } from './Questions/questions.js';
 import styles from './css/Game.module.scss';
 import {
@@ -23,7 +20,6 @@ import {
   useCounterOfCorrectAnswers,
   useGameWinners,
 } from './Hooks/game-hooks.js';
-import { NUMBER_OF_QUESTIONS_PER_PLAYER, SECONDS_PER_QUESTION_WITH_TIMER } from './constants.js';
 
 export default function Game({ fields: settingFields, isGameStarted, setStartGame, playersNames: nameOfPlayers }) {
 
@@ -41,9 +37,11 @@ export default function Game({ fields: settingFields, isGameStarted, setStartGam
   const playerTurn = usePlayerTurn(0, playersNames);
   const counterOfCorrectAnswers = useCounterOfCorrectAnswers(playersNames);
   const { answerStatus, setAnswerStatus } = useAnswerStatus();
-  const [ansStatusVisibility, setAnsStatusVisibility] = useState(false)
-  const [startTimer, setStartTimer] = useState(playWithTimer);
+  const [ ansStatusVisibility, setAnsStatusVisibility ] = useState(false)
+  const [ startTimer, setStartTimer ] = useState(playWithTimer);
   const { gameWinners, setGameWinners, restartWinnersGame } = useGameWinners();
+  const [ isGameFinished, setGameIsFinished ] = useState(false);
+  
 
   const players = createPlayers(playersNames, counterOfCorrectAnswers, playerTurn, gameWinners);
 
@@ -60,6 +58,7 @@ export default function Game({ fields: settingFields, isGameStarted, setStartGam
 
   function whenGameisFinished() {
 
+    setGameIsFinished(true)
     setStartGame(false);
     playerTurn.setPlayerTurn(numberOfPlayers, true);
     setGameWinners(counterOfCorrectAnswers.counter);
@@ -85,6 +84,7 @@ export default function Game({ fields: settingFields, isGameStarted, setStartGam
 
     const newPlayers = setPlayerNames(+newState.numberOfPlayers)
 
+    setGameIsFinished(false);
     restartWinnersGame();
     counterOfCorrectAnswers.resetCounter(newPlayers);
     questionsIds.resetAlreadyUsed();
@@ -124,43 +124,47 @@ export default function Game({ fields: settingFields, isGameStarted, setStartGam
     },
   };
 
-  const timerSettings = {
-    initialValue: SECONDS_PER_QUESTION_WITH_TIMER,
-    startTimer,
-    handlerForTimeOver,
-  };
-
-  const isGameOver = isGameFinished(playersNames.length, NUMBER_OF_QUESTIONS_PER_PLAYER, questionsIds.alreadyUsed.length);
-
   return (
-    <div className={styles.mainContainer}>
+    <div className={styles.appContainer}>
       <div onClick={handleModal} className={`${styles.overlay} ${(modalState) ? styles.showOverlay : ''}`}></div>
-      <main className={styles.gameContainer}>
+      <main className={styles.mainContainer}>
         <GameSettingsModal {...modalProps} />
         <div className={styles.mobile}>
-          <MobileSideNavBar playerTurn={playerTurn}/>
-          <PlayersNavMobile players={players}/>
+          <MobileSideNavBar playerTurn={playerTurn} isGameFinished={isGameFinished}/>
         </div>
-        <div className={styles.notMobile}>
-          <PlayersNav players={players} />
+        <div className={styles.playersNavContainer}>
+          <PlayersNav players={players}/>
         </div>
-        <GameWinnersAndTimer
-          timerSettings={timerSettings}
-          gameWinners={gameWinners}
-        />
-        <div className={styles.questionsAndAnswersContainer}>
-            <QuestionText text={questionText} />
-            <OptionsInQuestion
-              options={answers}
-              correctOption={correctOption}
-              onClick={onOptionClick}
-              isGameFinished={isGameOver}
-            />
+        <div className={styles.gameContainer}>
+          { 
+            (isGameFinished) ? 
+            <WinnersView gameWinners={gameWinners} isGameFinished={isGameFinished}/> :
+            <QuestionsAndAnswers 
+              startTimer={startTimer}
+              handlerForTimeOver={handlerForTimeOver}
+              questionText={questionText}
+              optionsInQuestionProps={{
+                options: answers,
+                correctOption,
+                onClick: onOptionClick,
+                isGameFinished,
+              }}
+            />  
+          }
         </div>
-        <AnswerStatus status={answerStatus} visibility={ansStatusVisibility} />
-        <BelowAnswersContainer handleModal={handleModal} isGameStarted={isGameStarted} restartGame={restartGame}/>
+        <div className={styles.belowAnswersContainer}>
+          <BelowAnswersContainer 
+            handleModal={handleModal} 
+            isGameStarted={isGameStarted} 
+            restartGame={restartGame}
+            ansStatusProps={{
+              status: answerStatus,
+              visibility: ansStatusVisibility
+            }}
+          />
+        </div>
+        <Footer/>
       </main>
-      <Footer/>
     </div>
   );
 }

@@ -1,0 +1,40 @@
+@import '../../../../css/_fonts.scss';
+@import '../../../../css/_buttons.scss';
+@import '../../../../css/_colors.scss';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hide {
+    display: none;
+}
+
+.button {
+    @extend .startButton;
+}
+
+.titleContainer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+
+    .title {
+        color: $primary-lighter;
+    }
+
+    h1 {
+        font-family: $font-poppins;
+        padding-left: 1em;
+    }
+}
+
+.buttonsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin: 0 1em 1em;
+}

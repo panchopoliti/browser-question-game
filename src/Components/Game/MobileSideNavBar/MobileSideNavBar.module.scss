@@ -1,0 +1,77 @@
+@import '../../../css/mediaQueries';
+@import '../../../css/colors';
+
+.hide {
+    display: none !important;
+}
+
+.sideNav {
+    height: 80%;
+    width: 50px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+
+    .playerNameContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0.8em 3.5em 0.2em;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+        transform-origin: top left;
+        transform: rotate(-90deg) translate(-100%);
+
+        .playerName,
+        .subtitle {
+            margin: 0;
+            white-space: nowrap;
+        }
+
+        .playerName {
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: #fff;
+        }
+
+        .subtitle {
+            color: #ffffffad;
+        }
+
+    }
+
+
+}
+
+@for $i from 1 through length($players-colors) {
+
+    .playerNameContainer-#{$i} {
+        background-color: nth($players-colors, $i);
+    }
+}
+
+@media screen and (max-width: $phones) {
+    .sideNav {
+
+        .playerNameContainer {
+            padding: 0.2em 3.5em;
+
+            .playerName {
+                font-size: 0.9em;
+            }
+
+            .subtitle {
+                font-size: 0.8em;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $tablet) {
+
+    .sideNav {
+        display: none;
+    }
+}

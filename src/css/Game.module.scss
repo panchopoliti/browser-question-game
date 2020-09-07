@@ -6,9 +6,8 @@
   display: none;
 }
 
-.mainContainer {
+.appContainer {
   text-align: center;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,17 +32,18 @@
         visibility: visible;
     }
 
-    .gameContainer {
+    .mainContainer {
         width: 100vw;
-        height: 100vh;
-        background-color: $main-back-color;
+        background-color: $main-theme;
 
-        .questionsAndAnswersContainer {
+        .gameContainer {
+            height: 70vh;
+        }
+
+        .belowAnswersContainer {
             display: flex;
-            margin-top: 2em;
-            width: 100%;
-            flex-direction: column;
-            align-items: center; 
+            flex-direction: row;
+            height: 20vh;
         }
     }
 
@@ -51,12 +51,6 @@
 
 @media screen and (min-width: $tablet) {
     .mobile {
-        display: none;
-    }
-}
-
-@media screen and (max-width: $tablet) {
-    .notMobile {
         display: none;
     }
 }

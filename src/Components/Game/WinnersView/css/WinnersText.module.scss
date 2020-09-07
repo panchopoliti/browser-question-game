@@ -1,0 +1,19 @@
+@import '../../../../css/_colors.scss';
+@import '../../../../css/_fonts.scss';
+
+
+.text {
+    color: #fff;
+    font-size: 2.2em;
+    padding: 1em; 
+    margin: 0;
+    font-family: $font-oxygen;
+}
+
+
+@for $i from 1 through length($players-colors) {
+
+    .text-#{$i} {
+        color: nth($players-colors-hover, $i);
+    }
+}

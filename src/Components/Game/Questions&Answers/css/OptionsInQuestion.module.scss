@@ -1,0 +1,87 @@
+@import '../../../../css/_colors.scss';
+@import '../../../../css/_buttons.scss';
+@import '../../../../css/_mediaQueries.scss';
+
+.hide {
+    display: none !important;
+}
+
+.listContainer {
+    padding: 0;
+    width: 60%;
+
+    .option {
+        list-style: none;
+        padding: 0.5em;
+
+        .button {
+            @extend .buttonDefaultStyles;
+            color: #fff;
+            font-family: "Roboto", sans-serif;
+            border: 2px solid $primary;
+            background-color: $primary;
+            transition: opacity 0.5s, transform 0.5s;
+            opacity: 1;
+        }
+
+        .animateToRight {
+            transform: translate(9em);
+            opacity: 0;
+        }
+
+        .animateFromLeft {
+            transform: translate(-9em);
+            opacity: 0;
+        }
+        
+        .correct {
+            background-color: $success;
+            border: 2px solid $success;
+        }
+        
+        .incorrect {
+            background-color: $danger;
+            border: 2px solid $danger;
+        }
+        
+        .correct, .incorrect {
+            color: #fff;
+        }
+    }
+}
+
+@media screen and (min-width: $tablet) {
+    .listContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        .option {
+
+            .button {
+        
+                &:hover {
+                    background-color: $primary-lighter;
+                    border: 2px solid $primary-lighter;
+                }
+            }
+
+            .correct {
+
+
+                &:hover {
+                    background-color: $success;
+                    border: 2px solid $success;
+                }
+            }
+
+            .incorrect {
+            
+                &:hover {
+                    background-color: $danger;
+                    border: 2px solid $danger;
+                }
+            }
+        }
+    }
+}

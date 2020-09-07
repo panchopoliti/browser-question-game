@@ -1,0 +1,55 @@
+@import '../../../../css/_buttons.scss';
+@import '../../../../css/_colors.scss';
+@import '../../../../css/_mediaQueries.scss';
+
+.hide {
+    display: none;
+}
+
+.show {
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    .button {
+        @include buttonWithoutHover(#fff, $primary-lighter);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 0;
+        border: 0;
+        border-radius: 0;
+        width: 100%;
+
+    
+        > figure {
+            padding-right: 0.5em;
+        }  
+
+        .rotateChevron {
+            transform: rotate(180deg);
+        }  
+    }
+}
+
+@media screen and (min-width: $tablet) {
+
+    .mobile {
+        display: none;
+    }
+
+    .button {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: $tablet) {
+    .desktop {
+        display: none;
+    }
+}

@@ -1,0 +1,18 @@
+@import '../../../../css/_colors.scss';
+
+.hide {
+    display: none;
+}
+
+.container {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    .icon {
+        fill: $warning;
+    }
+}

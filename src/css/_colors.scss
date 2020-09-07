@@ -1,5 +1,9 @@
+$main-theme: #303846; 
+
 $danger-lighter: #FA686C; 
 $danger: #ef5858;
+
+$warning: #ffba00;
 
 $primary: #1976d2;
 $primary-lighter: #4da3f9;
@@ -9,7 +13,5 @@ $success: #5cd696;
 // $success-hover: #028a6f;
 $success-lighter: #39E0A2;
 
-$main-back-color: #303846;
-
-$players-colors: #56e454, #f72d32, #443B9F, #CA945D;
-$players-colors-hover: #39E0A2, #FA686C, #7064ef, #ffbf7d;
+$players-colors: #007300, #af272b, #443B9F, #CA945D;
+$players-colors-hover: #00a400, #f72d32, #7064ef, #ffbf7d;

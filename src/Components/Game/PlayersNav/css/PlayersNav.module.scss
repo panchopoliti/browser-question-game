@@ -1,0 +1,102 @@
+@import '../../../../css/_fonts.scss';
+@import '../../../../css/_mediaQueries.scss';
+@import '../../../../css/_colors.scss';
+
+.hide {
+    display: none;
+}
+
+.listContainer {
+    display:  flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+
+    .navItem {
+        list-style: none;
+        width: 100%;
+
+        .nameContainer {
+
+            .name {
+                padding: 1em;
+                font-family: $font-roboto;
+                font-weight: 700;
+                color: #fff;
+                margin: 0;
+                text-transform: uppercase;
+            }
+        }
+
+        .yourTurn {
+            display: none;
+        }
+
+        .tooltip {
+            position: relative;
+            font-size: 0.85em;
+            padding: 0.3em 0.5em;
+            border-top: 1px solid #ffffff61;
+            color: #fff;
+        }
+
+        .playerTurn {
+            padding: 1.5em;
+        }   
+
+    }
+
+}
+
+@for $i from 1 through 4 {
+
+    .navItem:nth-child(#{$i}) > .nameContainer {
+        background-color: nth($players-colors, $i);
+
+        + .tooltip {
+            background-color: nth($players-colors, $i);
+        }
+
+        @media screen and (min-width: $tablet) {
+            + .tooltip {
+                background-color: nth($players-colors-hover, $i);
+            }
+
+            &:hover {
+                background-color: nth($players-colors-hover, $i);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $tablet) {
+
+    .listContainer {
+        margin: 0 0 1em 0;
+
+        .navItem {
+    
+            &:hover {
+                cursor: pointer;
+            }
+    
+            &:hover > .tooltip {
+                display: block;
+            }
+
+            .yourTurn {
+                display: block;
+                color: #fff;
+                border-top: 1px solid #ffffff61;
+                margin: 0;
+                padding: 0.5em 0;
+                font-family: $font-oxygen;
+            }
+        
+            .tooltip {
+                display: none;
+                border: 0;
+            }
+        }
+    }
+}
