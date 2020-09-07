@@ -1,0 +1,29 @@
+@import './mediaQueries';
+
+.desktop {
+    color :#fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0 20%;
+
+    > h1 {
+        font-size: 3em;
+    }
+}
+
+@media screen and (min-width: 480px) {
+
+    .mobile {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .desktop {
+        display: none;
+    }
+}

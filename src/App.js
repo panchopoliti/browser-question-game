@@ -3,7 +3,9 @@ import { GameSettings } from './Components/Game';
 import { useHookWithValueAndHandler } from './Hooks/game-hooks.js';
 import { getDifficulties } from './functions/question-functions.js';
 import { createFieldIds } from './functions/settings-form-functions.js';
+import jaguar from './static/Logos/black-jaguar-100.png';
 import Game from './Game.js';
+import styles from './css/App.module.scss';
 
 const names = [
     {
@@ -76,7 +78,14 @@ export default function App() {
 
     return (
         <React.Fragment>
-            {showApp}
+            <div className={styles.desktop}>
+                <h1>Open Dev Tools and resize to Mobile Screen or less than 480px</h1>
+                <h4>(Desktop Version coming soon...)</h4>
+                <img src={jaguar} alt='Logo'/>
+            </div>
+            <div className={styles.mobile}>
+                {showApp}
+            </div>
         </React.Fragment>
     )
 }
