@@ -79,7 +79,7 @@ export default function App() {
     return (
         <React.Fragment>
             <div className={styles.desktop}>
-                <h1>Open Dev Tools and resize to Mobile Screen or less than 480px</h1>
+                <h1>You can play in you phone, or opening Dev Tools and toggling to Device Toolbar, or resizing to less than 480px</h1>
                 <h4>(Desktop Version coming soon...)</h4>
                 <img src={jaguar} alt='Logo'/>
             </div>
