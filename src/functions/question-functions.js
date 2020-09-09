@@ -6,6 +6,10 @@ import {
 import { listOfQuestions } from '../Questions/questions.js';
 import { MILISECONDS_BETWEEN_QUESTIONS, NUMBER_OF_QUESTIONS_PER_PLAYER } from '../constants.js';
 
+export const isLongTextQuestion = (questionText) => (questionText.length > 70);
+
+export const isAtLeastOneLongAnswer = (options) => !options.every((text) => text.length <= 20);
+
 export function createPlayers(playersNames, counterOfCorrectAnswers, playerTurn, gameWinners) {
 
       const players = playersNames.map((player, i) => {

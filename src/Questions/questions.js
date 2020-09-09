@@ -270,7 +270,7 @@ let listOfQuestionsWithoutId = [
   {
     question: '¿Qué tienen en común estos jugadores: Pierre Aubameyang, Thierry Henry, Sebastien Squillaci, David Trezeguet y Emmanuel Petit ? ',
     answers: [
-      'Todos Representaron a la Selección Francesa',
+      'Todos Representaron a Francia',
       'Todos jugaron en el Arsenal',
       'Todos son Delanteros',
       'Todos Jugaron en el Monaco',

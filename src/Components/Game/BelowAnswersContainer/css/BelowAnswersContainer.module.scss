@@ -3,7 +3,7 @@
 .container {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-end;
     width: 100%;
 
@@ -29,8 +29,8 @@
 
     .centerContainer {
         display: flex;
-        justify-content: flex-end;
-        width: 65%;
+        justify-content: center;
+        width: 100%;
 
         .startButton {
             @extend .startButton;

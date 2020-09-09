@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './css/OptionsInQuestion.module.scss';
 import { MILISECONDS_BETWEEN_QUESTIONS } from '../../../constants.js';
 import { Button } from '../../Generic';
+import { isAtLeastOneLongAnswer } from '../../../functions/question-functions.js';
 
 export default function OptionsInQuestion({ options, onClick, correctOption, isGameFinished }) {
  
@@ -10,6 +11,8 @@ export default function OptionsInQuestion({ options, onClick, correctOption, isG
     const [targetBtnText, setTargetBtn] = useState(null);
     const [startRightAnimation, setStartRightAnimation] = useState(false);
     const [startLeftAnimation, setStartLeftAnimation] = useState(true);
+
+    const isThereOneLongAnswer = isAtLeastOneLongAnswer(options);
 
     const listOfOptions = options.map((text, i) => {
 
@@ -38,9 +41,19 @@ export default function OptionsInQuestion({ options, onClick, correctOption, isG
         const animation = `${(startRightAnimation) ? styles.animateToRight : ''}
             ${(startLeftAnimation) ? styles.animateFromLeft : ''}`;
 
+        const marginSize = (options.length === 5) || (options.length === 4 && isThereOneLongAnswer) ? styles.noMarginTop :
+            (options.length === 4) ? styles.reduceMarginTop : '';
+        
+        const xsmallDevicesClass = (options.length === 5 && isThereOneLongAnswer) ? styles.longQuestionsAndSmallDevices : ''; 
+
+
         return (
-            <li key={i} className={styles.option}>
-                <Button text={upperCaseText} className={`${styles.button} ${btnClassName} ${animation}`} onClick={onButtonClick}/>
+            <li key={i} className={`${styles.option} ${marginSize} ${xsmallDevicesClass}`}>
+                <Button 
+                    text={upperCaseText} 
+                    className={`${styles.button} ${btnClassName} ${animation}`} 
+                    onClick={onButtonClick}
+                />
             </li>
         )   
     });
@@ -52,13 +65,13 @@ export default function OptionsInQuestion({ options, onClick, correctOption, isG
     )
 }
 
-function setAnimations(leftAnimationHandler, rightAnimatinoHandler) {
+function setAnimations(leftAnimationHandler, rightAnimationHandler) {
     window.setTimeout(() => {
-        rightAnimatinoHandler(true);
+        rightAnimationHandler(true);
     }, MILISECONDS_BETWEEN_QUESTIONS - 1000);
 
     window.setTimeout(() => {
-        rightAnimatinoHandler(false);
+        rightAnimationHandler(false);
         leftAnimationHandler(true);
     }, MILISECONDS_BETWEEN_QUESTIONS);
 }

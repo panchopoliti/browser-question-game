@@ -50,6 +50,68 @@
     }
 }
 
+@media screen and (max-height: 850px) {
+    .listContainer {
+            
+        .noMarginTop {
+
+            .button {
+                margin-top: 0em;
+            }
+            
+            &:nth-child(1) {
+
+                > .button {
+                    margin-top: 1em;
+                }
+            }
+        }
+        .reduceMarginTop {
+
+            .button {
+                margin-top: 1em;
+                
+            }
+        }
+    }
+
+}
+
+
+@media screen and (max-height: 650px) {
+    .listContainer {
+
+        .longQuestionsAndSmallDevices {
+
+            .button {
+                font-size: 0.7em;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-height: 600px) {
+
+    .listContainer {
+    
+        .option {
+    
+            .button {
+                font-size: 0.7em;
+            }
+        }
+
+        .longQuestionsAndSmallDevices {
+            padding: 0.2em;
+
+            .button {
+                font-size: 0.5em;
+            }
+        }
+    }
+}
+
 @media screen and (min-width: $tablet) {
     .listContainer {
         display: flex;

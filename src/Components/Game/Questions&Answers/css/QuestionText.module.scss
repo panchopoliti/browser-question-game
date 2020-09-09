@@ -41,3 +41,17 @@
         font-size: 1em;
     }
 }
+
+@media screen and (max-height: 850px) {
+
+  .smallQuestion {
+    font-size: 0.9em;
+  }
+}
+
+@media screen and (max-height: 650px) {
+
+  .smallQuestion {
+    font-size: 0.8em;
+  }
+}
