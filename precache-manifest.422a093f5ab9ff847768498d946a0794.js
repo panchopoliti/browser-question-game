@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a1eeb62251ef542a0382f49e943a9636",
+    "revision": "916c3c3e7f554f692d4ce7c59d6ec5dd",
     "url": "/browser-question-game/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/browser-question-game/static/css/2.6eff3e32.chunk.css"
   },
   {
-    "revision": "b1f12d6a2f43e592607f",
+    "revision": "ef4c73664e0a19e50ab1",
     "url": "/browser-question-game/static/css/main.adcec45b.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/browser-question-game/static/js/2.b3440114.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b1f12d6a2f43e592607f",
-    "url": "/browser-question-game/static/js/main.1f633d29.chunk.js"
+    "revision": "ef4c73664e0a19e50ab1",
+    "url": "/browser-question-game/static/js/main.87d18582.chunk.js"
   },
   {
     "revision": "71853730335446e35602",
