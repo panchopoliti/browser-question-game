@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/browser-question-game/static/css/main.c7eba33d.chunk.css",
-    "main.js": "/browser-question-game/static/js/main.a9574fae.chunk.js",
-    "main.js.map": "/browser-question-game/static/js/main.a9574fae.chunk.js.map",
+    "main.js": "/browser-question-game/static/js/main.68d9d37e.chunk.js",
+    "main.js.map": "/browser-question-game/static/js/main.68d9d37e.chunk.js.map",
     "runtime-main.js": "/browser-question-game/static/js/runtime-main.47081c66.js",
     "runtime-main.js.map": "/browser-question-game/static/js/runtime-main.47081c66.js.map",
     "static/css/2.6eff3e32.chunk.css": "/browser-question-game/static/css/2.6eff3e32.chunk.css",
     "static/js/2.0ba5f48d.chunk.js": "/browser-question-game/static/js/2.0ba5f48d.chunk.js",
     "static/js/2.0ba5f48d.chunk.js.map": "/browser-question-game/static/js/2.0ba5f48d.chunk.js.map",
     "index.html": "/browser-question-game/index.html",
-    "precache-manifest.8f6eeb6994950717d6dc6eb6b7ee4a21.js": "/browser-question-game/precache-manifest.8f6eeb6994950717d6dc6eb6b7ee4a21.js",
+    "precache-manifest.934e11676849a41ea8212c8e133a630d.js": "/browser-question-game/precache-manifest.934e11676849a41ea8212c8e133a630d.js",
     "service-worker.js": "/browser-question-game/service-worker.js",
     "static/css/2.6eff3e32.chunk.css.map": "/browser-question-game/static/css/2.6eff3e32.chunk.css.map",
     "static/css/main.c7eba33d.chunk.css.map": "/browser-question-game/static/css/main.c7eba33d.chunk.css.map",
@@ -21,6 +21,6 @@
     "static/css/2.6eff3e32.chunk.css",
     "static/js/2.0ba5f48d.chunk.js",
     "static/css/main.c7eba33d.chunk.css",
-    "static/js/main.a9574fae.chunk.js"
+    "static/js/main.68d9d37e.chunk.js"
   ]
 }
